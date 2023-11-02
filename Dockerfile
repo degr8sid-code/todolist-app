@@ -2,14 +2,14 @@
 FROM node:14
 
 # Set the working directory in the container
-WORKDIR /todolist-app-react-js-main/src/app
+WORKDIR /todolist-app/src/app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-COPY public/ /todolist-app-react-js-main/public
-COPY src/ /todolist-app-react-js-main/src
-COPY package.json /todolist-app-react-js-main/
+COPY public/ /todolist-app/public
+COPY src/ /todolist-app/src
+COPY package.json /todolist-app/
 
 # Install dependencies
 RUN npm install
